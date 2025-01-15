@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+import random
 import time
 
 from selenium.webdriver.chrome.service import Service
@@ -10,9 +11,8 @@ driver = webdriver.Chrome(service=s)
 query = "amazon reviews"
 file = 0
 #for i in range(1,20):
-time.sleep(10)
 driver.get(f"https://www.tiktok.com/search/user?q={query}&t=1736861735197")
-time.sleep(10)
+
 elems = driver.find_elements(By.CLASS_NAME,"search-user-container")
 print(f"{len(elems)} items found")
 for elem in elems:
@@ -22,5 +22,6 @@ for elem in elems:
           file += 1
 #print(elem.text)
 
-time.sleep(8)
+delay = random.uniform(4, 7)
+time.sleep(delay)
 driver.close()
