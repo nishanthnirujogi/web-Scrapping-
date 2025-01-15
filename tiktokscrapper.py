@@ -11,6 +11,7 @@ driver = webdriver.Chrome(service=s)
 query = "amazon reviews"
 file = 0
 #for i in range(1,20):
+
 driver.get(f"https://www.tiktok.com/search/user?q={query}&t=1736861735197")
 
 elems = driver.find_elements(By.CLASS_NAME,"search-user-container")
