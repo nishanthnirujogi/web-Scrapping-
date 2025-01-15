@@ -24,8 +24,8 @@ driver.maximize_window()
 email_element=driver.find_element(By.ID,"email")
 password_element=driver.find_element(By.ID,"pass")
 
-email_element.send_keys("BURNER ACCOUNT EMAIL ID HERE")
-password_element.send_keys("PASTE PASSWORD HERE")
+email_element.send_keys("topgunmaverick392@gmail.com")
+password_element.send_keys("nani1408@")
 
 login_button=driver.find_element(By.NAME,'login')
 login_button.click()
