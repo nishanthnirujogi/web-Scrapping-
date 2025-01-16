@@ -1,5 +1,3 @@
-import bs4
-# we use beautiful soup to find elements in the html code 
 import requests
 #it sends requests from local pc to amazon website
 import pandas as pd
@@ -15,13 +13,18 @@ print(Webpage)
 #if you get 200 response code u can continue
 
 Webpage.content
+#this will give all the HTML code of the page
+type(Webpage.content)
+#to know data type
 
+import bs4 
+# we use beautiful soup to find elements in the html code 
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(Webpage.content,"html.parser")
+print(soup)
+#convert the parcel into proper html file,it contails all the data
 
-
-
-
-
-
-
-
+#links = soup.find_all("a",attrs={'class':'a-link-normal s-line-clamp-2 s-link-style a-text-normal'})
+links = soup.find_all("a", id = 'href').get_text()
+#fetch links as list 
 
