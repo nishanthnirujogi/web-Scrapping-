@@ -14,6 +14,8 @@ file = 0
 
 driver.get(f"https://www.tiktok.com/search/user?q={query}&t=1736861735197")
 
+
+
 elems = driver.find_elements(By.CLASS_NAME,"search-user-container")
 print(f"{len(elems)} items found")
 for elem in elems:
