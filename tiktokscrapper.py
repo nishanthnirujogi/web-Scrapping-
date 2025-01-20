@@ -25,3 +25,4 @@ for elem in elems:
 
 delay = random.uniform(4, 7)
 time.sleep(delay)
+driver.close()
